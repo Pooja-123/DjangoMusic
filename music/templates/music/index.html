@@ -1,0 +1,7 @@
+{% load staticfiles %}
+<link rel="stylesheet" type ="text/css" href ="{% static 'music/style.css' %}"  />
+<ul>
+  {% for album in all_albums %}
+  <li><a href = "{% url 'music:detail' album.id %}">{{ album.album_title}}</a></li>
+  {% endfor %}
+</ul>
